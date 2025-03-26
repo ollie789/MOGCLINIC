@@ -1,0 +1,27 @@
+{
+  "name": "clinic-dashboard",
+  "version": "1.0.0",
+  "description": "Back Pain Clinic Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/seed.js",
+    "seed-simple": "cd server && npm install bcryptjs && node seed-simple.js",
+    "seed-users": "cd server && npm install bcryptjs && node seed-users.js"
+  },
+  "keywords": [
+    "clinic",
+    "dashboard",
+    "back pain",
+    "healthcare"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+} 
